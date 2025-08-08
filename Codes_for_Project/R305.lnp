@@ -1,0 +1,12 @@
+--cpu ARM7TDMI
+".\startup.o"
+".\delay.o"
+".\lcd.o"
+".\main.o"
+".\uart0.o"
+".\r305.o"
+".\keypad.o"
+--strict --scatter ".\R305.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\R305.map" -o .\R305.axf
